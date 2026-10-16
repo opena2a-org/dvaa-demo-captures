@@ -23,13 +23,12 @@ capability grant is blocked at the egress boundary.
 
 ## Two things that make this safe
 
-1. **All data is synthetic.** The wallet uses public test card numbers
-   (`4242 4242 4242 4242`), `@example.com` emails, and FAKE-marked identity. It can
-   never collide with a real person's data.
+1. **All data is synthetic.** It can never collide with a real person's data: test
+   card numbers, `@example.com` emails, FAKE-marked identity.
 2. **The trap is locked to this demo.** The agentpwn page only serves its injection
-   when fetched with the demo's key. An unrelated agent that merely browses the deals
-   page gets a plain page and is never induced to leak anything. So the only data that
-   can ever appear in this repo is the demo's own synthetic wallet.
+   when fetched with the demo's key.
+
+Both points in full: [docs/safety.md](docs/safety.md).
 
 ## Record your own
 
